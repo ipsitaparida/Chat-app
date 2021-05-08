@@ -16,9 +16,8 @@ app.use(bodyParser.urlencoded({extended: false}))
 // uncomment this if deprication warning
 mongoose.Promise = Promise
 
-// mongoDB uri
-var dbUrl = 'mongodb://user:user@cluster0-shard-00-00.5pyvg.mongodb.net:27017,cluster0-shard-00-01.5pyvg.mongodb.net:27017,cluster0-shard-00-02.5pyvg.mongodb.net:27017/myFirstDatabase?ssl=true&replicaSet=atlas-6hgjxi-shard-0&authSource=admin&retryWrites=true&w=majority'
-
+// mongoDB uri. Check the URI in connection method-> mongoDB's native driver 
+var dbUrl = 'mongodb://<db_user>:<db_password>@<cluster.mongodb.net:27017>/<db_name>
 var Message = mongoose.model('Message', {
     name: String,
     message: String
